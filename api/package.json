@@ -1,0 +1,10 @@
+{
+  "name": "zabka-api",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "mongoose": "^8.0.0",
+    "joi": "^17.11.0",
+    "nodemailer": "^6.9.0"
+  }
+}
