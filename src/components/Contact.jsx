@@ -103,7 +103,7 @@ const Contact = () => {
     try {
       const response = await axios.post('/api/contactApis', formData);
       
-      if (response.data.success) {
+      if (response.data.isSuccess) {
         Swal.fire({
           title: 'Success!',
           text: 'Your message has been sent successfully. We will get back to you soon.',

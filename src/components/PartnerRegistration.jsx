@@ -130,7 +130,7 @@ const PartnerRegistration = () => {
     try {
       const response = await axios.post('/api/partnerApis', formData);
       
-      if (response.data.success) {
+      if (response.data.isSuccess) {
         Swal.fire({
           title: 'Success!',
           text: 'Your partnership application has been submitted successfully. We will contact you soon.',

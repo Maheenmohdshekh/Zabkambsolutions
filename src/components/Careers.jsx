@@ -212,7 +212,7 @@ const Careers = () => {
     try {
       const response = await axios.post('/api/careerApis', formData);
       
-      if (response.data.success) {
+      if (response.data.isSuccess) {
         Swal.fire({
           title: 'Success!',
           text: 'Your application has been submitted successfully. We will contact you soon.',
@@ -364,8 +364,8 @@ const Careers = () => {
 
       {/* Career Application Dialog */}
       {isDialogOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 md:p-4">
-          <div className="bg-white rounded-2xl max-w-full w-full max-h-[100vh] overflow-hidden">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
             {/* Dialog Header - Sticky with Zabka branding */}
             <div className="sticky top-0 bg-blue-600 text-white p-6 border-b border-blue-500">
               <div className="flex items-center justify-between">
@@ -383,7 +383,7 @@ const Careers = () => {
             </div>
 
             {/* Dialog Content - Scrollable */}
-            <div className="overflow-y-auto pb-6 max-h-[calc(90vh-120px)]">
+            <div className="overflow-y-auto max-h-[calc(90vh-120px)]">
               <form onSubmit={handleSubmit} className="p-6 space-y-6">
                 {/* Full Name and Email */}
                 <div className="grid md:grid-cols-2 gap-4">
@@ -550,7 +550,7 @@ const Careers = () => {
                     {!isDisabled ? (
                       <>
                         <Send size={20} />
-                        <span>Submit </span>
+                        <span>Submit Application</span>
                       </>
                     ) : (
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
