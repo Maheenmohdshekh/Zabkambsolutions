@@ -1,74 +1,121 @@
 import React, { useEffect, useState } from 'react';
+import { Phone, Mail, MapPin, Building, ArrowRight, Linkedin } from 'lucide-react';
 import logo from '../assets/Zabka MB Solutions (1).png';
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
-  const quickLinks = [
-    'Our Services',
-    'Careers',
-    'Become a Partner',
-    'Contact Us'
-  ];
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-  const services = [
-    'NCMC Cards',
-    'FASTag Solutions',
-    'Banking Support',
-    'E-Governance',
-    'Agriculture Support',
-    'E-Commerce Solutions'
-  ];
+    const footerElement = document.getElementById('footer');
+    if (footerElement) {
+      observer.observe(footerElement);
+    }
+
+    return () => {
+      if (footerElement) {
+        observer.unobserve(footerElement);
+      }
+    };
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Main Footer Content */}
-        <div 
-          className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-        >
+    <footer id="footer" className="bg-gray-900 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className={`grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 flex items-center justify-center">
-                <img 
-                  src={logo} 
-                  alt="ZABKA MB Solutions" 
+                <img
+                  src={logo}
+                  alt="Zabka MB Solutions Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">ZABKA MB</h3>
-                <p className="text-sm text-gray-400">SOLUTIONS PVT LTD</p>
+                <h3 className="text-lg font-semibold">ZABKA MB SOLUTIONS</h3>
+                <p className="text-sm text-gray-400">Private Limited</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Banking, Digital and Agriculture Solutions for a Better Tomorrow
             </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-400 mb-4">
               CIN: U62020BR2025PTC078141
             </p>
+            {/* <div className="flex items-center space-x-4">
+              <a 
+                href="https://linkedin.com/company/zabka-mb-solutions" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
+                <Linkedin size={20} />
+              </a>
+            </div> */}
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={`#${link.toLowerCase().replace(/\s+/g, '')}`}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group"
+                >
+                  <ArrowRight size={14} className="mr-2 group-hover:translate-x-1 transition-transform" />
+                  Our Services
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('careers')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group"
+                >
+                  <ArrowRight size={14} className="mr-2 group-hover:translate-x-1 transition-transform" />
+                  Careers
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('partner-registration')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group"
+                >
+                  <ArrowRight size={14} className="mr-2 group-hover:translate-x-1 transition-transform" />
+                  Become a Partner
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors flex items-center group"
+                >
+                  <ArrowRight size={14} className="mr-2 group-hover:translate-x-1 transition-transform" />
+                  Contact Us
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -76,11 +123,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <span className="text-gray-300">{service}</span>
-                </li>
-              ))}
+              <li><a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">NCMC Cards</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">FASTag Solutions</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">Banking Support</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">E-Governance</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">Agriculture Support</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">E-Commerce Solutions</a></li>
             </ul>
           </div>
 
@@ -89,17 +137,40 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <span className="text-gray-400 mt-1">📞</span>
+                <Phone size={16} className="text-gray-400 mt-1" />
                 <div>
-                  <p className="text-gray-300">011 7121 8473</p>
+                  <a 
+                    href="tel:+911171218473" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    011 7121 8473
+                  </a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <span className="text-gray-400 mt-1">✉️</span>
+                <Mail size={16} className="text-gray-400 mt-1" />
                 <div>
-                  <p className="text-gray-300">MAHEENMOHD3@OUTLOOK.COM</p>
+                  <a 
+                    href="mailto:MAHEENMOHD3@OUTLOOK.COM" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    MAHEENMOHD3@OUTLOOK.COM
+                  </a>
                 </div>
               </div>
+              {/* <div className="flex items-start space-x-3">
+                <Linkedin size={16} className="text-gray-400 mt-1" />
+                <div>
+                  <a 
+                    href="https://linkedin.com/company/zabka-mb-solutions" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -108,7 +179,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex items-start space-x-3">
-              <span className="text-gray-400 mt-1">📍</span>
+              <MapPin size={16} className="text-gray-400 mt-1" />
               <div>
                 <p className="text-gray-300 font-medium mb-1">Local Address:</p>
                 <p className="text-gray-400 text-sm">
@@ -117,7 +188,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <span className="text-gray-400 mt-1">🏢</span>
+              <Building size={16} className="text-gray-400 mt-1" />
               <div>
                 <p className="text-gray-300 font-medium mb-1">Registered Office:</p>
                 <p className="text-gray-400 text-sm">

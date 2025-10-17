@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ArrowRight, MapPin, CheckCircle, Clock, Award } from 'lucide-react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,8 +31,7 @@ const Hero = () => {
               }`}
               style={{ transitionDelay: '0.2s' }}
             >
-               Empowering India with Financial, Banking & Agriculture Solutions
-
+              Empowering India with Financial, Banking & Agriculture Solutions
             </h1>
 
             {/* Subtitle */}
@@ -42,7 +42,6 @@ const Hero = () => {
               style={{ transitionDelay: '0.3s' }}
             >
               Smooth & Reliable Services for Individuals, Businesses & Communities Nationwide
-
             </p>
 
             {/* Description */}
@@ -64,35 +63,42 @@ const Hero = () => {
             >
               <a href='#services' className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <span>Explore Services</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <ArrowRight size={20} />
               </a>
               <a href='#contact' className="bg-white border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105">
                 Contact Us
               </a>
             </div>
 
-        {/* Stats */}
-        <div 
-          className={`grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-gray-200 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
-          style={{ transitionDelay: '0.6s' }}
-        >
-          <div className="text-center group">
-            <p className="text-sm text-gray-500 mb-1 group-hover:text-blue-600 transition-colors duration-300">Pan India</p>
-            <p className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">Nationwide Coverage</p>
-          </div>
-          <div className="text-center border-l-0 sm:border-l border-gray-200 sm:pl-8 group">
-            <p className="text-sm text-gray-500 mb-1 group-hover:text-blue-600 transition-colors duration-300">Services</p>
-            <p className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">9+ Solutions</p>
-          </div>
-          <div className="text-center border-l-0 sm:border-l border-gray-200 sm:pl-8 group">
-            <p className="text-sm text-gray-500 mb-1 group-hover:text-blue-600 transition-colors duration-300">Support</p>
-            <p className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">24/7 Available</p>
-          </div>
-        </div>
+            {/* Stats */}
+            <div 
+              className={`grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-gray-200 transition-all duration-1000 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: '0.6s' }}
+            >
+              <div className="text-center group">
+                <div className="flex justify-center mb-2">
+                  <MapPin size={24} className="text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-500 mb-1 group-hover:text-blue-600 transition-colors duration-300">Pan India</p>
+                <p className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">Nationwide Coverage</p>
+              </div>
+              <div className="text-center border-l-0 sm:border-l border-gray-200 sm:pl-8 group">
+                <div className="flex justify-center mb-2">
+                  <CheckCircle size={24} className="text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-500 mb-1 group-hover:text-blue-600 transition-colors duration-300">Services</p>
+                <p className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">9+ Solutions</p>
+              </div>
+              <div className="text-center border-l-0 sm:border-l border-gray-200 sm:pl-8 group">
+                <div className="flex justify-center mb-2">
+                  <Clock size={24} className="text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <p className="text-sm text-gray-500 mb-1 group-hover:text-blue-600 transition-colors duration-300">Support</p>
+                <p className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">24/7 Available</p>
+              </div>
+            </div>
           </div>
 
           {/* Right Content - Image */}
@@ -117,8 +123,13 @@ const Hero = () => {
               }`}
               style={{ transitionDelay: '1s' }}
             >
-              <p className="text-sm text-gray-500 mb-1">Trusted Partner</p>
-              <p className="text-2xl font-bold text-gray-900">NICT TPL</p>
+              <div className="flex items-center space-x-2">
+                <Award size={20} className="text-blue-600" />
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Trusted Partner</p>
+                  <p className="text-2xl font-bold text-gray-900">NICT TPL</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
