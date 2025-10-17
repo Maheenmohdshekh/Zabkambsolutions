@@ -87,8 +87,8 @@ const Services = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="py-20 bg-white overflow-x-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+    <section ref={sectionRef} id="services" className="py-20 bg-white overflow-x-hidden w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         {/* Section Header */}
         <div 
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -134,55 +134,30 @@ const Services = () => {
 
         {/* Pan India Work Section */}
         <div 
-          className={`bg-blue-600 rounded-2xl p-8 lg:p-12 text-white transition-all duration-1000 ${
+          className={`bg-blue-600 rounded-2xl p-8 text-white transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '0.8s' }}
         >
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Pan India Work</h3>
+              <h3 className="text-3xl font-bold mb-6">Pan India Work</h3>
               <div className="space-y-4">
-                <div className="flex items-center space-x-3 group">
-                  <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="text-lg group-hover:text-blue-200 transition-colors duration-300">Metro Work for NCMC Card</span>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <span className="text-lg">Metro Work for NCMC Card</span>
                 </div>
-                <div className="flex items-center space-x-3 group">
-                  <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="text-lg group-hover:text-blue-200 transition-colors duration-300">FASTag Implementation</span>
-                </div>
-                <div className="flex items-center space-x-3 group">
-                  <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="text-lg group-hover:text-blue-200 transition-colors duration-300">Banking & Financial Services</span>
-                </div>
-                <div className="flex items-center space-x-3 group">
-                  <div className="w-2 h-2 bg-white rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                  <span className="text-lg group-hover:text-blue-200 transition-colors duration-300">E-Governance Solutions</span>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <span className="text-lg">FASTag Services Nationwide</span>
                 </div>
               </div>
             </div>
             <div className="text-center lg:text-right">
               <div className="flex justify-center lg:justify-end mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Pan India Services"
-                  className="w-full h-80 object-cover rounded-xl shadow-lg"
-                />
+                <span className="text-6xl">🇮🇳</span>
               </div>
-              <div 
-                className={`inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 transition-all duration-1000 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-                style={{ transitionDelay: '1s' }}
-              >
-                <div className="flex items-center space-x-2">
-                  <Flag size={20} className="text-blue-200" />
-                  <div>
-                    <p className="text-sm font-medium">Serving Nationwide</p>
-                    <p className="text-xs text-blue-200">28 States & 8 UTs</p>
-                  </div>
-                </div>
-              </div>
+              <p className="text-xl font-medium">Serving All States & Union Territories</p>
             </div>
           </div>
         </div>
