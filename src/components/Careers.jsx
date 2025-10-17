@@ -289,7 +289,7 @@ const Careers = () => {
               </div>
 
                   {/* Job Details */}
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  <div className="grid md:grid-cols-1 gap-6 mb-8">
                     <div>
                       <h4 className="text-lg font-semibold text-gray-800 mb-3">Requirements:</h4>
                       <ul className="space-y-2 text-gray-600">
