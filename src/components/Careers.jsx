@@ -239,25 +239,25 @@ const Careers = () => {
     <>
       <section ref={sectionRef} id="careers" className="py-20 bg-white overflow-x-hidden w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8 overflow-x-hidden">
-          {/* Section Header */}
+        {/* Section Header */}
           <div 
             className={`text-center mb-16 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Join Our Team
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Career Opportunities
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join India's fastest-growing digital and banking solutions provider.
-            </p>
+          <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            Join Our Team
           </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Career Opportunities
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join India's fastest-growing digital and banking solutions provider.
+          </p>
+        </div>
 
-          {/* Job Openings */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        {/* Job Openings */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {jobOpenings.map((job, index) => {
               const IconComponent = job.icon;
               return (
@@ -268,25 +268,25 @@ const Careers = () => {
                   }`}
                   style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
                 >
-                  {/* Job Header */}
-                  <div className="flex items-start space-x-4 mb-6">
+              {/* Job Header */}
+              <div className="flex items-start space-x-4 mb-6">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                       <IconComponent size={24} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{job.title}</h3>
-                      <div className="flex flex-wrap gap-2">
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{job.title}</h3>
+                  <div className="flex flex-wrap gap-2">
                         <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center">
                           <MapPin size={14} className="mr-1" />
-                          {job.location}
-                        </span>
+                      {job.location}
+                    </span>
                         <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center">
                           <Clock size={14} className="mr-1" />
-                          {job.type}
-                        </span>
-                      </div>
-                    </div>
+                      {job.type}
+                    </span>
                   </div>
+                </div>
+              </div>
 
                   {/* Job Details */}
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -308,9 +308,9 @@ const Careers = () => {
                           <li key={i} className="flex items-start space-x-2">
                             <CheckCircle size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
                             <span>{res}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    </li>
+                  ))}
+                </ul>
                     </div>
                   </div>
 
@@ -325,7 +325,7 @@ const Careers = () => {
                 </div>
               );
             })}
-          </div>
+              </div>
 
           {/* Why Work With Us Section */}
           <div 
@@ -364,14 +364,14 @@ const Careers = () => {
 
       {/* Career Application Dialog */}
       {isDialogOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[99999999999] p-4">
+          <div className="bg-white rounded-2xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl w-full max-h-[90vh] overflow-hidden">
             {/* Dialog Header - Sticky with Zabka branding */}
-            <div className="sticky top-0 bg-blue-600 text-white p-6 border-b border-blue-500">
+            <div className="sticky top-0 bg-blue-600 text-white p-4 sm:p-6 border-b border-blue-500">
               <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-2xl font-bold">Apply for {selectedPosition}</h3>
-                  <p className="text-blue-100">Fill out the form below to submit your application</p>
+            <div>
+                  <h3 className="text-xl sm:text-2xl font-bold">Apply for {selectedPosition}</h3>
+                  <p className="text-blue-100 text-sm sm:text-base">Fill out the form below to submit your application</p>
                 </div>
                 <button
                   onClick={closeDialog}
@@ -379,12 +379,12 @@ const Careers = () => {
                 >
                   <X size={24} className="text-white" />
                 </button>
-              </div>
+                    </div>
             </div>
 
             {/* Dialog Content - Scrollable */}
             <div className="overflow-y-auto max-h-[calc(90vh-120px)]">
-              <form onSubmit={handleSubmit} className="p-6 space-y-6">
+              <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                 {/* Full Name and Email */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -397,7 +397,7 @@ const Careers = () => {
                       value={formData.fullName}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                       required
                     />
                     {errors.fullName && (
@@ -414,7 +414,7 @@ const Careers = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="your@email.com"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                       required
                     />
                     {errors.email && (
@@ -435,7 +435,7 @@ const Careers = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="9876543210"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                       required
                     />
                     {errors.phone && (
@@ -452,7 +452,7 @@ const Careers = () => {
                       value={formData.experience}
                       onChange={handleInputChange}
                       placeholder="e.g., 2 years in sales"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                       required
                     />
                     {errors.experience && (
@@ -491,7 +491,7 @@ const Careers = () => {
                     onChange={handleInputChange}
                     placeholder="List your relevant skills and qualifications"
                     rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                     required
                   />
                   {errors.skills && (
@@ -510,7 +510,7 @@ const Careers = () => {
                     onChange={handleInputChange}
                     placeholder="Tell us why you want to join our team and what makes you a great fit for this position"
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base"
                     required
                   />
                   {errors.coverLetter && (
