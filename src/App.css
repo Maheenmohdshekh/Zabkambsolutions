@@ -150,13 +150,43 @@ html {
 header {
   position: sticky !important;
   top: 0 !important;
-  z-index: 50 !important;
+  z-index: 9999 !important;
   width: 100% !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
 }
 
 /* Ensure sections scroll normally */
 section {
   position: relative !important;
+}
+
+/* Fix for mobile sticky positioning */
+@media (max-width: 768px) {
+  header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+  }
+}
+
+/* Fix for tablet sticky positioning */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+  }
+}
+
+/* Fix for desktop sticky positioning */
+@media (min-width: 1025px) {
+  header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+  }
 }
 
 /* Hide scrollbars but keep scrolling functionality */
