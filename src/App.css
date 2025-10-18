@@ -146,12 +146,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Ensure sticky positioning works correctly */
+/* Ensure sticky positioning works correctly for header only */
 header {
   position: sticky !important;
   top: 0 !important;
   z-index: 50 !important;
   width: 100% !important;
+}
+
+/* Ensure sections scroll normally */
+section {
+  position: relative !important;
 }
 
 /* Hide scrollbars but keep scrolling functionality */
