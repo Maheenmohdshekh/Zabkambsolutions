@@ -183,7 +183,7 @@ const Contact = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20 bg-white overflow-x-hidden w-full">
+    <section ref={sectionRef} id="contact" className="py-20 bg-gray-100 overflow-x-hidden w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         {/* Section Header */}
         <div 

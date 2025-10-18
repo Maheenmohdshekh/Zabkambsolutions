@@ -160,7 +160,7 @@ const PartnerRegistration = () => {
   };
 
   return (
-    <section ref={sectionRef} id="partner-registration" className="py-20 bg-gray-50 overflow-x-hidden w-full">
+    <section ref={sectionRef} id="partner-registration" className="py-20 bg-green-50 overflow-x-hidden w-full">
       <div className="w-full px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         {/* Section Header */}
         <div 

@@ -146,6 +146,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Ensure sticky positioning works correctly */
+header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  width: 100% !important;
+}
+
 /* Hide scrollbars but keep scrolling functionality */
 * {
   scrollbar-width: none; /* Firefox */
