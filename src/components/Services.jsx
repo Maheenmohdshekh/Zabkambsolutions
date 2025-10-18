@@ -87,8 +87,8 @@ const Services = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="py-20 bg-gray-50 overflow-x-hidden w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+    <section ref={sectionRef} id="services" className="py-20 bg-gray-50 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div 
           className={`text-center mb-16 transition-all duration-1000 ${

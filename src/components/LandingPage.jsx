@@ -9,9 +9,9 @@ import Footer from './Footer';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white">
       <Header />
-      <main className="overflow-x-hidden">
+      <main>
         <Hero />
         <Services />
         <Careers />
