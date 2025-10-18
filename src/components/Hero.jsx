@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <section className="bg-gradient-to-br from-blue-50 to-white py-16 lg:py-24 max-w-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
@@ -65,7 +65,7 @@ const Hero = () => {
                 <span>Explore Services</span>
                 <ArrowRight size={20} />
               </a>
-              <a href='#contact' className="bg-white border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105">
+              <a href='#contact' className="bg-white border text-center border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105">
                 Contact Us
               </a>
             </div>
