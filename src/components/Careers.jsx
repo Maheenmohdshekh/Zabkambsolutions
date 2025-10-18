@@ -289,7 +289,7 @@ const Careers = () => {
               </div>
 
                   {/* Job Details */}
-                  <div className="grid md:grid-cols-1 gap-6 mb-8">
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div>
                       <h4 className="text-lg font-semibold text-gray-800 mb-3">Requirements:</h4>
                       <ul className="space-y-2 text-gray-600">
@@ -364,8 +364,8 @@ const Careers = () => {
 
       {/* Career Application Dialog */}
       {isDialogOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[99999999999] p-4">
-          <div className="bg-white rounded-2xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-xl w-full md:w-3xl max-h-[90vh] overflow-hidden">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl w-full max-h-[90vh] overflow-hidden">
             {/* Dialog Header - Sticky with Zabka branding */}
             <div className="sticky top-0 bg-blue-600 text-white p-4 sm:p-6 border-b border-blue-500">
               <div className="flex items-center justify-between">

@@ -11,7 +11,7 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Header />
-      <main className="overflow-x-hidden pt-16">
+      <main className="overflow-x-hidden">
         <Hero />
         <Services />
         <Careers />
