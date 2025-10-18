@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Phone, Mail, MapPin, Building, ArrowRight, Linkedin } from 'lucide-react';
-import logo from '../assets/Zabka MB Solutions (1).png';
+import { Phone, Mail, MapPin, Building, ArrowRight, Linkedin, Clock } from 'lucide-react';
+import logo from '../assets/images/logo/zabka-white-logo.png';
 
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,7 +38,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="footer" className="bg-gray-900 text-white py-12">
+    <footer id="footer" className="bg-gray-900 text-white py-12 max-w-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -46,17 +46,17 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 flex items-center justify-center">
+              <div className="w-42 h-16 flex items-center justify-center">
                 <img
                   src={logo}
                   alt="Zabka MB Solutions Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div>
+              {/* <div>
                 <h3 className="text-lg font-semibold">ZABKA MB SOLUTIONS</h3>
                 <p className="text-sm text-gray-400">Private Limited</p>
-              </div>
+              </div> */}
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Banking, Digital and Agriculture Solutions for a Better Tomorrow
@@ -146,19 +146,38 @@ const Footer = () => {
                     href="tel:+911171218473" 
                     className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
-                    011 7121 8473
+                    8587017507
                   </a>
                 </div>
               </div>
+              {/* <div className="flex items-start space-x-3">
+                <Mail size={16} className="text-gray-400 mt-1" />
+                <div>
+                  <a 
+                    href="mailto: Maheenmohd3@outlook.com" 
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                  >
+                   
+                   Maheenmohd3@outlook.com
+                  </a>
+                </div>
+              </div> */}
               <div className="flex items-start space-x-3">
                 <Mail size={16} className="text-gray-400 mt-1" />
                 <div>
                   <a 
-                    href="mailto:MAHEENMOHD3@OUTLOOK.COM" 
+                    href="mailto:info@zabkambsolutions.in" 
                     className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
-                    MAHEENMOHD3@OUTLOOK.COM
+                   
+                  info@zabkambsolutions.in
                   </a>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Clock size={16} className="text-gray-400 mt-1" />
+                <div>
+                  <span className="text-gray-300">Business Hours : 9:00 AM - 6:00 PM</span>
                 </div>
               </div>
               {/* <div className="flex items-start space-x-3">
@@ -180,13 +199,13 @@ const Footer = () => {
 
         {/* Address Information */}
         <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex items-start space-x-3">
               <MapPin size={16} className="text-gray-400 mt-1" />
               <div>
                 <p className="text-gray-300 font-medium mb-1">Local Address:</p>
                 <p className="text-gray-400 text-sm">
-                  E11A/198, Shastri Park, Near HP Petrol Pump and Phone Booth, Delhi – 110053
+               E11A/198, Shastri Park, Near HP Petrol Pump and Photo Copy Shop, Delhi – 110053
                 </p>
               </div>
             </div>
@@ -195,7 +214,7 @@ const Footer = () => {
               <div>
                 <p className="text-gray-300 font-medium mb-1">Registered Office:</p>
                 <p className="text-gray-400 text-sm">
-                  C/o Naseema Khatoon, W.No.8, Khasra 477, PO Bandhpura, Katra, Muzaffarpur, Bihar – 843321
+                 C/o Naseema Khatoon, W.No.8, Khasra 477, PO Bandhpura, Katra, Muzaffarpur, Bihar – 843321
                 </p>
               </div>
             </div>

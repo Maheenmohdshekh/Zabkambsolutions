@@ -136,7 +136,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Numbers",
-      details: ["011 7121 8473"]
+      details: ["8587017507"]
     },
     {
       icon: Mail,
@@ -183,8 +183,8 @@ const Contact = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20 bg-gray-100 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} id="contact" className="py-20 bg-gray-100 max-w-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div 
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -231,7 +231,7 @@ const Contact = () => {
               </div>
 
               {/* Email and Phone */}
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -359,7 +359,7 @@ const Contact = () => {
 
         {/* Support Features */}
         <div 
-          className={`grid md:grid-cols-3 gap-6 mt-16 transition-all duration-1000 ${
+          className={`grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{ transitionDelay: '0.6s' }}

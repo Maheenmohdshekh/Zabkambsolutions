@@ -9,8 +9,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-white py-16 lg:py-24 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-br from-blue-50 to-white py-16 lg:py-24 max-w-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
@@ -108,7 +108,7 @@ const Hero = () => {
             }`}
             style={{ transitionDelay: '0.7s' }}
           >
-            <div className="relative rounded-2xl overflow-x-hidden shadow-2xl group">
+            <div className="relative rounded-2xl shadow-2xl group">
               <img
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                 alt="ZABKA MB Solutions"
@@ -118,7 +118,7 @@ const Hero = () => {
             
             {/* Trusted Partner Badge */}
             <div 
-              className={`absolute -bottom-6 -left-6 bg-white border border-gray-200 rounded-xl p-4 shadow-lg transition-all duration-1000 ${
+              className={`absolute bottom-4 left-4 bg-white border border-gray-200 rounded-xl p-4 shadow-lg transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
               style={{ transitionDelay: '1s' }}

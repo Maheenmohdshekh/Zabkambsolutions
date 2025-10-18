@@ -1,32 +1,44 @@
-import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
-import Swal from 'sweetalert2';
-import { User, Briefcase, X, FileText, MapPin, Clock, CheckCircle, Send, Award, Users, Target } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
+import {
+  User,
+  Briefcase,
+  X,
+  FileText,
+  MapPin,
+  Clock,
+  CheckCircle,
+  Send,
+  Award,
+  Users,
+  Target,
+} from "lucide-react";
 
 const Careers = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedPosition, setSelectedPosition] = useState('');
+  const [selectedPosition, setSelectedPosition] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    position: '',
-    experience: '',
-    location: '',
-    skills: '',
-    coverLetter: '',
-    resume: ''
+    fullName: "",
+    email: "",
+    phone: "",
+    position: "",
+    experience: "",
+    location: "",
+    skills: "",
+    coverLetter: "",
+    resume: "",
   });
   const [errors, setErrors] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    position: '',
-    experience: '',
-    location: '',
-    skills: '',
-    coverLetter: ''
+    fullName: "",
+    email: "",
+    phone: "",
+    position: "",
+    experience: "",
+    location: "",
+    skills: "",
+    coverLetter: "",
   });
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -62,13 +74,13 @@ const Careers = () => {
       requirements: [
         "Smartphone",
         "Basic computer knowledge",
-        "Good communication skills"
+        "Good communication skills",
       ],
       responsibilities: [
         "NCMC/FASTag sales",
         "Customer onboarding",
-        "Local area support"
-      ]
+        "Local area support",
+      ],
     },
     {
       id: 2,
@@ -79,70 +91,79 @@ const Careers = () => {
       requirements: [
         "Computer proficiency",
         "Excel knowledge",
-        "Documentation skills"
+        "Documentation skills",
       ],
       responsibilities: [
         "Documentation",
         "Reporting",
-        "Data entry & Excel work"
-      ]
-    }
+        "Data entry & Excel work",
+      ],
+    },
   ];
 
   const benefits = [
     "Competitive Earnings: Transparent salary with an attractive commission structure",
     "Professional Growth: Training, certifications, and ongoing skill development.",
     "Pan‑India Opportunities: Work nationwide with strong local field and back-office support.",
-    "Impactful Work: Contribute to India's digital and financial inclusion revolution."
+    "Impactful Work: Contribute to India's digital and financial inclusion revolution.",
   ];
 
   const validate = () => {
     let isValid = true;
-    let newErrors = { fullName: '', email: '', phone: '', position: '', experience: '', location: '', skills: '', coverLetter: '' };
+    let newErrors = {
+      fullName: "",
+      email: "",
+      phone: "",
+      position: "",
+      experience: "",
+      location: "",
+      skills: "",
+      coverLetter: "",
+    };
 
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full name is required';
+      newErrors.fullName = "Full name is required";
       isValid = false;
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
       isValid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
+      newErrors.email = "Email is invalid";
       isValid = false;
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
+      newErrors.phone = "Phone number is required";
       isValid = false;
     } else if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = 'Phone number must be 10 digits';
+      newErrors.phone = "Phone number must be 10 digits";
       isValid = false;
     }
 
     if (!formData.position.trim()) {
-      newErrors.position = 'Position is required';
+      newErrors.position = "Position is required";
       isValid = false;
     }
 
     if (!formData.experience.trim()) {
-      newErrors.experience = 'Experience is required';
+      newErrors.experience = "Experience is required";
       isValid = false;
     }
 
     if (!formData.location.trim()) {
-      newErrors.location = 'Location is required';
+      newErrors.location = "Location is required";
       isValid = false;
     }
 
     if (!formData.skills.trim()) {
-      newErrors.skills = 'Skills are required';
+      newErrors.skills = "Skills are required";
       isValid = false;
     }
 
     if (!formData.coverLetter.trim()) {
-      newErrors.coverLetter = 'Cover letter is required';
+      newErrors.coverLetter = "Cover letter is required";
       isValid = false;
     }
 
@@ -152,83 +173,83 @@ const Careers = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
+
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
 
   const handleApply = (position) => {
     setSelectedPosition(position);
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      position: position
+      position: position,
     }));
     setIsDialogOpen(true);
   };
 
   const closeDialog = () => {
     setIsDialogOpen(false);
-    setSelectedPosition('');
+    setSelectedPosition("");
     setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      position: '',
-      experience: '',
-      location: '',
-      skills: '',
-      coverLetter: '',
-      resume: ''
+      fullName: "",
+      email: "",
+      phone: "",
+      position: "",
+      experience: "",
+      location: "",
+      skills: "",
+      coverLetter: "",
+      resume: "",
     });
     setErrors({
-      fullName: '',
-      email: '',
-      phone: '',
-      position: '',
-      experience: '',
-      location: '',
-      skills: '',
-      coverLetter: ''
+      fullName: "",
+      email: "",
+      phone: "",
+      position: "",
+      experience: "",
+      location: "",
+      skills: "",
+      coverLetter: "",
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validate()) {
       return;
     }
 
     setIsDisabled(true);
-    
+
     try {
-      const response = await axios.post('/api/careerApis', formData);
-      
+      const response = await axios.post("/api/careerApis", formData);
+
       if (response.data.isSuccess) {
         Swal.fire({
-          title: 'Success!',
-          text: 'Your application has been submitted successfully. We will contact you soon.',
-          icon: 'success',
-          confirmButtonText: 'OK'
+          title: "Success!",
+          text: "Your application has been submitted successfully. We will contact you soon.",
+          icon: "success",
+          confirmButtonText: "OK",
         });
-        
+
         closeDialog();
       }
     } catch (error) {
-      console.error('Error submitting application:', error);
+      console.error("Error submitting application:", error);
       Swal.fire({
-        title: 'Error!',
-        text: 'There was an error submitting your application. Please try again.',
-        icon: 'error',
-        confirmButtonText: 'OK'
+        title: "Error!",
+        text: "There was an error submitting your application. Please try again.",
+        icon: "error",
+        confirmButtonText: "OK",
       });
     } finally {
       setIsDisabled(false);
@@ -237,80 +258,101 @@ const Careers = () => {
 
   return (
     <>
-      <section ref={sectionRef} id="careers" className="py-20 bg-blue-50 w-full">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-          <div 
+      <section
+        ref={sectionRef}
+        id="careers"
+        className="py-20 bg-blue-50 max-w-screen"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div
             className={`text-center mb-16 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
             }`}
           >
-          <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            Join Our Team
-          </div>
+            <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Join Our Team
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Career Opportunities
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join India's fastest-growing digital and banking solutions provider.
-          </p>
-        </div>
+              Career Opportunities
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join India's fastest-growing digital and banking solutions
+              provider.
+            </p>
+          </div>
 
-        {/* Job Openings */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {/* Job Openings */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {jobOpenings.map((job, index) => {
               const IconComponent = job.icon;
               return (
                 <div
                   key={job.id}
                   className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 hover:shadow-xl ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    isVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
                   }`}
                   style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
                 >
-              {/* Job Header */}
-              <div className="flex items-start space-x-4 mb-6">
+                  {/* Job Header */}
+                  <div className="flex items-start space-x-4 mb-6">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
                       <IconComponent size={24} />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{job.title}</h3>
-                  <div className="flex flex-wrap gap-2">
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {job.title}
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
                         <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center">
                           <MapPin size={14} className="mr-1" />
-                      {job.location}
-                    </span>
+                          {job.location}
+                        </span>
                         <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm flex items-center">
                           <Clock size={14} className="mr-1" />
-                      {job.type}
-                    </span>
+                          {job.type}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
 
                   {/* Job Details */}
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  <div className="grid md:grid-cols-1 gap-6 mb-8">
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-800 mb-3">Requirements:</h4>
+                      <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                        Requirements:
+                      </h4>
                       <ul className="space-y-2 text-gray-600">
                         {job.requirements.map((req, i) => (
                           <li key={i} className="flex items-start space-x-2">
-                            <CheckCircle size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <CheckCircle
+                              size={18}
+                              className="text-green-500 flex-shrink-0 mt-0.5"
+                            />
                             <span>{req}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-800 mb-3">Responsibilities:</h4>
+                      <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                        Responsibilities:
+                      </h4>
                       <ul className="space-y-2 text-gray-600">
                         {job.responsibilities.map((res, i) => (
                           <li key={i} className="flex items-start space-x-2">
-                            <CheckCircle size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
+                            <CheckCircle
+                              size={18}
+                              className="text-green-500 flex-shrink-0 mt-0.5"
+                            />
                             <span>{res}</span>
-                    </li>
-                  ))}
-                </ul>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
 
@@ -325,18 +367,22 @@ const Careers = () => {
                 </div>
               );
             })}
-              </div>
+          </div>
 
           {/* Why Work With Us Section */}
-          <div 
+          <div
             className={`bg-white rounded-2xl p-8 shadow-lg transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
             }`}
-            style={{ transitionDelay: '0.5s' }}
+            style={{ transitionDelay: "0.5s" }}
           >
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Why Work With Us?</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">
+                  Why Work With Us?
+                </h3>
                 <ul className="space-y-4">
                   {benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start space-x-3">
@@ -364,14 +410,18 @@ const Careers = () => {
 
       {/* Career Application Dialog */}
       {isDialogOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl w-full max-h-[90vh] overflow-hidden">
+        <div className="fixed inset-0  bg-black bg-opacity-50  flex items-center justify-center z-50 p-4" >
+          <div className="bg-white  rounded-2xl max-w-md sm:max-w-lg md:max-w-xl  lg:max-w-2xl w-full max-h-[90vh]">
             {/* Dialog Header - Sticky with Zabka branding */}
-            <div className="sticky top-0 bg-blue-600 text-white p-4 sm:p-6 border-b border-blue-500">
+            <div className="sticky top-0 rounded-t-2xl  bg-blue-600 text-white p-4 sm:p-6 border-b border-blue-500">
               <div className="flex items-center justify-between">
-            <div>
-                  <h3 className="text-xl sm:text-2xl font-bold">Apply for {selectedPosition}</h3>
-                  <p className="text-blue-100 text-sm sm:text-base">Fill out the form below to submit your application</p>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold">
+                    Apply for {selectedPosition}
+                  </h3>
+                  <p className="text-blue-100 text-sm sm:text-base">
+                    Fill out the form below to submit your application
+                  </p>
                 </div>
                 <button
                   onClick={closeDialog}
@@ -379,12 +429,15 @@ const Careers = () => {
                 >
                   <X size={24} className="text-white" />
                 </button>
-                    </div>
+              </div>
             </div>
 
             {/* Dialog Content - Scrollable */}
-            <div className="overflow-y-auto max-h-[calc(90vh-120px)]">
-              <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-4 sm:space-y-6">
+            <div className="max-h-[calc(85vh-120px)] overflow-y-auto">
+              <form
+                onSubmit={handleSubmit}
+                className="p-4 sm:p-6 space-y-4 sm:space-y-6"
+              >
                 {/* Full Name and Email */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -401,7 +454,9 @@ const Careers = () => {
                       required
                     />
                     {errors.fullName && (
-                      <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.fullName}
+                      </p>
                     )}
                   </div>
                   <div>
@@ -418,7 +473,9 @@ const Careers = () => {
                       required
                     />
                     {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -439,7 +496,9 @@ const Careers = () => {
                       required
                     />
                     {errors.phone && (
-                      <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.phone}
+                      </p>
                     )}
                   </div>
                   <div>
@@ -456,7 +515,9 @@ const Careers = () => {
                       required
                     />
                     {errors.experience && (
-                      <p className="text-red-500 text-sm mt-1">{errors.experience}</p>
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.experience}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -476,7 +537,9 @@ const Careers = () => {
                     required
                   />
                   {errors.location && (
-                    <p className="text-red-500 text-sm mt-1">{errors.location}</p>
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.location}
+                    </p>
                   )}
                 </div>
 
@@ -514,7 +577,9 @@ const Careers = () => {
                     required
                   />
                   {errors.coverLetter && (
-                    <p className="text-red-500 text-sm mt-1">{errors.coverLetter}</p>
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.coverLetter}
+                    </p>
                   )}
                 </div>
 

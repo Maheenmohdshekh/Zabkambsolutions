@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50 w-full">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-40 w-full left-0 right-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className={`flex items-center justify-between h-16 transition-all duration-1000 ${
@@ -42,20 +42,20 @@ const Header = () => {
         >
           {/* Logo */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="w-42 h-14 sm:w-42 sm:h-16 flex items-center justify-center">
+            <div className="w-42 h-16 sm:w-42 sm:h-16 flex items-center justify-center">
               <img 
                 src={logo} 
                 alt="ZABKA MB Solutions" 
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
               <h1 className="text-sm sm:text-lg font-semibold text-gray-900">ZABKA MB SOLUTIONS</h1>
               <p className="text-xs text-gray-500">Private Limited</p>
-            </div>
-            <div className="sm:hidden">
+            </div> */}
+            {/* <div className="sm:hidden">
               <h1 className="text-sm font-semibold text-gray-900">ZABKA MB SOLUTIONS</h1>
-            </div>
+            </div> */}
           </div>
 
           {/* Desktop Navigation */}
@@ -92,7 +92,7 @@ const Header = () => {
             {/* <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
               <a href="tel:+911171218473" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
                 <Phone size={14} />
-                <span>011 7121 8473</span>
+                <span>8587017507</span>
               </a>
               <a href="mailto:MAHEENMOHD3@OUTLOOK.COM" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
                 <Mail size={14} />
@@ -129,7 +129,7 @@ const Header = () => {
             {/* <div className="flex items-center justify-center space-x-6 text-sm text-gray-600 mb-4 pb-4 border-b border-gray-200">
               <a href="tel:+911171218473" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
                 <Phone size={16} />
-                <span>011 7121 8473</span>
+                <span>8587017507</span>
               </a>
               <a href="mailto:MAHEENMOHD3@OUTLOOK.COM" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
                 <Mail size={16} />

@@ -87,8 +87,8 @@ const Services = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="services" className="py-20 bg-gray-50 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} id="services" className="py-20 bg-gray-50 max-w-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div 
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -107,7 +107,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-16">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (

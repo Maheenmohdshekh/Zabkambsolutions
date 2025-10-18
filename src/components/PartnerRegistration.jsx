@@ -160,8 +160,8 @@ const PartnerRegistration = () => {
   };
 
   return (
-    <section ref={sectionRef} id="partner-registration" className="py-20 bg-green-50 w-full">
-      <div className="w-full px-4 sm:px-6 lg:px-8">
+    <section ref={sectionRef} id="partner-registration" className="py-20 bg-green-50 max-w-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div 
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -217,7 +217,7 @@ const PartnerRegistration = () => {
                 </div>
 
                 {/* Phone and Email */}
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Phone Number *
@@ -227,7 +227,7 @@ const PartnerRegistration = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="9718412563"
+                      placeholder="8587017507"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       required
                     />
@@ -259,7 +259,7 @@ const PartnerRegistration = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Areas of Interest *
                   </label>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {interestOptions.map((interest, index) => (
                       <div key={index} className="flex items-center">
                         <input
@@ -374,7 +374,7 @@ const PartnerRegistration = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Phone size={16} className="text-blue-200" />
-                  <span className="text-sm">011 7121 8473</span>
+                  <span className="text-sm">8587017507</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail size={16} className="text-blue-200" />
