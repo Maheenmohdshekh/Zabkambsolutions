@@ -468,7 +468,7 @@ const userTemplate = (data) => {
       </div>
       <div class="footer">
         <div class="social-links">
-          <a href="mailto:MAHEENMOHD3@OUTLOOK.COM">Email Us</a> • 
+          <a href="mailto:info@zabkambsolutions.in">Email Us</a> • 
           <a href="tel:+911171218473">Call Us</a>
         </div>
         Thank you for choosing Zabka MB Solutions.

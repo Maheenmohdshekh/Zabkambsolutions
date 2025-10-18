@@ -378,7 +378,7 @@ const PartnerRegistration = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail size={16} className="text-blue-200" />
-                  <span className="text-sm">MAHEENMOHD3@OUTLOOK.COM</span>
+                  <span className="text-sm">info@zabkambsolutions.in</span>
                 </div>
               </div>
             </div>

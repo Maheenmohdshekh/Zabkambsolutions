@@ -529,11 +529,11 @@ const userTemplate = (data) => {
         
         <div class="divider"></div>
         
-        <p>If you have any questions about the partnership process, please don't hesitate to contact us at <strong><a href="tel:+911171218473">+91 117121 8473</a></strong> or <strong><a href="mailto:MAHEENMOHD3@OUTLOOK.COM">MAHEENMOHD3@OUTLOOK.COM</a></strong>.</p>
+        <p>If you have any questions about the partnership process, please don't hesitate to contact us at <strong><a href="tel:+911171218473">+91 117121 8473</a></strong> or <strong><a href="mailto:info@zabkambsolutions.in">info@zabkambsolutions.in</a></strong>.</p>
       </div>
       <div class="footer">
         <div class="social-links">
-          <a href="mailto:MAHEENMOHD3@OUTLOOK.COM">Email Us</a> • 
+          <a href="mailto:info@zabkambsolutions.in">Email Us</a> • 
           <a href="tel:+911171218473">Call Us</a>
         </div>
         Thank you for choosing Zabka MB Solutions as your business partner.

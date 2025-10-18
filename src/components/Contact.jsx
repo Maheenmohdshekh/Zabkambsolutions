@@ -141,14 +141,15 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Address",
-      details: ["MAHEENMOHD3@OUTLOOK.COM"]
+      details: ["info@zabkambsolutions.in"]
     },
     {
       icon: MapPin,
       title: "Local Office",
       details: [
+       
         "E11A/198, Shastri Park",
-        "Near HP Petrol Pump",
+        "Near HP Petrol Pump and Photo Copy Shop",
         "Delhi – 110053"
       ]
     },

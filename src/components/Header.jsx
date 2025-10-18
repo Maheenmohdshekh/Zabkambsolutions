@@ -94,7 +94,7 @@ const Header = () => {
                 <Phone size={14} />
                 <span>8587017507</span>
               </a>
-              <a href="mailto:MAHEENMOHD3@OUTLOOK.COM" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
+              <a href="mailto:info@zabkambsolutions.in" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
                 <Mail size={14} />
                 <span>Email</span>
               </a>
@@ -131,7 +131,7 @@ const Header = () => {
                 <Phone size={16} />
                 <span>8587017507</span>
               </a>
-              <a href="mailto:MAHEENMOHD3@OUTLOOK.COM" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
+              <a href="mailto:info@zabkambsolutions.in" className="flex items-center space-x-1 hover:text-blue-600 transition-colors">
                 <Mail size={16} />
                 <span>Email</span>
               </a>

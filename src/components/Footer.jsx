@@ -154,11 +154,11 @@ const Footer = () => {
                 <Mail size={16} className="text-gray-400 mt-1" />
                 <div>
                   <a 
-                    href="mailto: Maheenmohd3@outlook.com" 
+                    href="mailto: info@zabkambsolutions.in" 
                     className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                    
-                   Maheenmohd3@outlook.com
+                   info@zabkambsolutions.in
                   </a>
                 </div>
               </div> */}
