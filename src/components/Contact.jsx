@@ -147,9 +147,9 @@ const Contact = () => {
       icon: MapPin,
       title: "Local Office",
       details: [
-       
+
         "E11A/198, Shastri Park",
-        "Near HP Petrol Pump and Photo Copy Shop",
+        "Near HP Petrol Pump",
         "Delhi – 110053"
       ]
     },

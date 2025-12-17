@@ -41,18 +41,19 @@ body {
   }
 }
 
-/* Ensure all containers respect viewport width */
-.container, 
-.max-w-7xl, 
-.max-w-6xl, 
-.max-w-5xl, 
-.max-w-4xl, 
-.max-w-3xl, 
-.max-w-2xl, 
+/* Set maximum container width to 1920px and center containers */
+.container,
+.max-w-7xl,
+.max-w-6xl,
+.max-w-5xl,
+.max-w-4xl,
+.max-w-3xl,
+.max-w-2xl,
 .max-w-xl,
 .max-w-full {
-  max-width: 100vw;
+  max-width: min(100vw, 1920px);
   width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 

@@ -1,13 +1,15 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { 
-  CreditCard, 
-  Car, 
-  Building, 
-  Handshake, 
-  ShoppingCart, 
-  Wheat, 
-  Users, 
-  Flag 
+import {
+  CreditCard,
+  Car,
+  Building,
+  Handshake,
+  ShoppingCart,
+  Wheat,
+  Users,
+  Flag,
+  UserCheck,
+  Briefcase
 } from 'lucide-react';
 
 const Services = () => {
@@ -83,6 +85,24 @@ const Services = () => {
       description: "Services available across all states and union territories",
       icon: Flag,
       color: "bg-cyan-500"
+    },
+    {
+      title: "Business to Citizen Services (B2C)",
+      description: "Direct business solutions and services for individual citizens and consumers",
+      icon: UserCheck,
+      color: "bg-teal-500"
+    },
+    {
+      title: "Manpower Work",
+      description: "Human resource management, recruitment, and workforce solutions",
+      icon: Briefcase,
+      color: "bg-red-500"
+    },
+    {
+      title: "Credit Card Services",
+      description: "Credit card assistance, applications, and financial support services",
+      icon: CreditCard,
+      color: "bg-emerald-500"
     }
   ];
 
