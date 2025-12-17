@@ -9,7 +9,11 @@ import {
   Users,
   Flag,
   UserCheck,
-  Briefcase
+  Briefcase,
+  FileText,
+  Calculator,
+  ClipboardList,
+  Building2
 } from 'lucide-react';
 
 const Services = () => {
@@ -103,6 +107,30 @@ const Services = () => {
       description: "Credit card assistance, applications, and financial support services",
       icon: CreditCard,
       color: "bg-emerald-500"
+    },
+    {
+      title: "Income Tax Return Filing",
+      description: "Professional income tax return preparation and filing services",
+      icon: Calculator,
+      color: "bg-violet-500"
+    },
+    {
+      title: "GST Registration",
+      description: "GST registration assistance and compliance services",
+      icon: ClipboardList,
+      color: "bg-rose-500"
+    },
+    {
+      title: "GST Return Filing",
+      description: "GST return preparation, filing, and compliance management",
+      icon: FileText,
+      color: "bg-amber-500"
+    },
+    {
+      title: "Company Registration",
+      description: "Complete company registration and incorporation services",
+      icon: Building2,
+      color: "bg-slate-500"
     }
   ];
 

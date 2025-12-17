@@ -44,12 +44,21 @@ const PartnerRegistration = () => {
   }, []);
 
   const interestOptions = [
-    'NCMC Card',
-    'FASTag',
+    'NCMC Cards',
+    'FASTag Solutions',
     'Banking Support',
-    'Agriculture Support',
+    'E-Governance',
     'E-Commerce',
-    'E-Governance'
+    'Agriculture Support',
+    'Community Services',
+    'Pan India Coverage',
+    'Business to Citizen Services (B2C)',
+    'Manpower Work',
+    'Credit Card Services',
+    'Income Tax Return Filing',
+    'GST Registration',
+    'GST Return Filing',
+    'Company Registration'
   ];
 
   const validate = () => {
